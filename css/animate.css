@@ -1,19 +1,95 @@
 #rotate {
     background-color: purple;
 	-webkit-transform: rotate(7deg);
+	animation: animate 3s infinite;
+	-webkit-animation-name: rotate; 
+    -webkit-animation-duration: 4s; 
+    animation-name: rotate;
+    animation-duration: 4s;
 }
 
 #skew {
 	background-color: blue;
 -webkit-transform: skew(10deg);
+
 }
 
 #all {
 	background-color: red;
 	-webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);
+
 }
 
 #matrix {
 	background-color: green;
-	-webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);
+	-webkit-transform: matrix(1, -0.3, 1, 1, 1, 1);
+	  border: 2px solid #000;
+ 	 width: 200px;
+ 	 height: 200px;
+ 	 display: block;
+ 	 margin: 10px;
+}
+
+input:focus {
+	color: blue;
+    background: lime;
+}
+    
+@keyframes animate{
+	0%{
+		background-color: red;
+	}
+    25%  {
+    	background-color:yellow;
+    	margin-left:25%;
+    	}
+    50%  {
+    	background-color:blue;
+    	 margin-left:15%;
+    	}
+    75%  {
+    	background-color:green;
+    	margin-left:30%;
+    }
+    100% {
+    	background-color:red
+    	; margin-left:40%;
+    }
+}
+
+@-webkit-keyframes rotate {
+	0%{
+		background-color: red;
+	}
+    25%  {
+    	background-color:blue;
+    	margin-left:25%;
+    	}
+    50%  {
+    	background-color:green;
+    	 margin-left:0%;
+    	}
+    75%  {
+    	background-color:purple;
+    	margin-left:70%;
+    }
+    100% {
+    	background-color:pink;
+    	margin-left:10%;
+    }
+  
+}
+
+
+
+
+
+#animate{
+	animation: animate 3s infinite;
+}
+
+
+
+#pseudo:hover {
+	background-color: blue;
 }
